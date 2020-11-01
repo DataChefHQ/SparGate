@@ -31,9 +31,6 @@ RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
 # Cleanup
 RUN rm -rfv /tmp/*
 
-# Set host name for Spark to work properly
-RUN echo 127.0.0.1 $HOSTNAME >> /etc/hosts
-
 # Add Spark tools to path
 ENV PATH="/opt/spark/bin/:${PATH}"
 
